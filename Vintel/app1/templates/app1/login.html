@@ -1,0 +1,22 @@
+{% extends 'app1/template.html' %}
+
+{% block content %}
+<div style="float: left; width: 100%;" class="body">
+    <form class="loginForm" method="POST" action="">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Login</h1>
+        {% csrf_token %}
+        <input type="text" name="username" value="username">
+        <input type="password" name="password" value="password">
+        <input type="submit" name="Login">
+        {% for message in messages %}
+            <p id="messages">{{ message }}</p>
+        {% endfor %}
+          <a href="{% url 'registerPage' %}" style="display: inline-block; text-decoration: none; font-size: 20px; margin: 5px;">Don't have an account? Register Now!</a>
+          <a href="" style="display: inline-block; text-decoration: none; font-size: 20px; margin: 5px;">Forgot Password?</a>
+    </form>
+
+</div>
+<script>
+    document.getElementById('title').innerHTML = "Login";
+</script>
+{% endblock %}

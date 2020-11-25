@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    background-color: #192327;
+    color: white;
+    min-height: 100%;
+}
+
+header{
+    background-color: #243339;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+}
+
+footer{
+    float: left;
+    background-color: #333;
+    height: 80px;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+}
+.navBar{
+    width: 100%;
+    float: left;
+    height: 50px;
+    margin-top: -40px;
+    padding-top: 10px;
+}
+
+.navA{
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #315363;
+    color: #dedede;
+    transition: 0.5s;
+}
+
+.navA:hover{
+    background-color: #dedede;
+    color: black;
+    transition: 0.5s;
+}
+.body{
+    min-height: 80%;
+}
+
+
+.loginForm{
+    margin: auto;
+    margin-top: 100px;
+    width: 400px;
+    color: black;
+    background-color: #dedede;
+    text-align: center;
+    padding: 10px;
+}
+
+.loginForm input{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loginForm p{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.loginForm input[type=submit]{
+    background-color: #0D3349;
+    color: white;
+}
+
+.loginForm input[type=submit]:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.registerForm{
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+    color: black;
+    background-color: #dedede;
+    text-align: center;
+    padding: 10px;
+}
+
+.registerForm input{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.registerForm p{
+    width: 30%;
+    margin: 4px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.registerForm input[type=submit]{
+    background-color: #0D3349;
+    color: white;
+    cursor: pointer;
+}
+
+.registerForm input[type=submit]:hover{
+    background-color: black;
+}

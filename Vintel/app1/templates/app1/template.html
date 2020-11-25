@@ -1,0 +1,43 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'app1/style.css' %}">
+    <link rel="icon" href="{% static "app1/iceberg.png" %}" type="image/png" sizes="16x16">
+    <title id="title">Home</title>
+</head>
+<body>
+<header>
+    <img src="{% static "app1/iceberg.png" %}" style="height: 60px; max-width: 100px; padding-top: 20px; margin-left: 10%; float: left; margin-right: 30px">
+    <p style="font-size: 50px; width: 60px; float:left; margin-top: 30px">Melted</p>
+    <a style="float: right; margin: 1%;" class="navA" href="{% url 'logout' %}" id="logoutA">Logout</a>
+    <a style="float: right; margin: 1%;" class="navA" href="{% url 'loginPage' %}" id="loginA">Login</a>
+    <a style="float: right; margin: 1% 0;" class="navA" href="{% url 'registerPage' %}" id="registerA">Register</a>
+    <h4 style="float: right; margin-right: 1%;" id="head4">Hello, {{ request.user }}</h4>
+
+    <div class="navBar">
+        
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+<footer class="footer" style="">
+    <p>&copy; 2021 Mohamed Muzzammil P A</p>
+</footer>
+<script>
+    let head4 = document.getElementById('head4').innerHTML;
+    //Not Logged in
+    if (head4 === 'Hello, AnonymousUser'){
+        document.getElementById('logoutA').style.display = "none";
+        document.getElementById('head4').innerHTML = "Not registered ?";
+        document.getElementById('loginA').style.display = "inline-block";
+        document.getElementById('registerA').style.display = "inline-block";
+    }
+    else{ //Logged in
+        document.getElementById('loginA').style.display = "none";
+        document.getElementById('registerA').style.display = "none";
+        document.getElementById('logoutA').style.display = "inline-block";
+    }
+</script>
+</html>
